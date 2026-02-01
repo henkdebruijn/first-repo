@@ -1,7 +1,11 @@
-# first-repo
+# Voedselautomatenkaart
 
-Add first line to Readme
+Een kleine webapp met een interactieve kaart (Leaflet + OpenStreetMap) waarop voedselautomaten in Nederland zichtbaar zijn. Pas de dataset in `app.js` aan om jouw volledige lijst te tonen.
 
-Add second line to Readme
+## Starten
 
-Once upon a time in a galaxy far away.
+Open `index.html` direct in de browser, of start een lokale server:
+
+```bash
+python -m http.server
+```

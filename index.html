@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voedselautomaten in Nederland</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div>
+          <h1>Voedselautomaten in Nederland</h1>
+          <p>Ontdek 24/7 automaten met verse producten in jouw buurt. Klik op een pin voor details.</p>
+        </div>
+        <div class="app__stats" id="stats"></div>
+      </header>
+
+      <main class="app__main">
+        <section class="app__panel">
+          <h2>Filters</h2>
+          <label class="filter">
+            <span>Toon alleen categorie</span>
+            <select id="categoryFilter">
+              <option value="all">Alle categorieën</option>
+            </select>
+          </label>
+          <label class="filter">
+            <span>Zoek op naam</span>
+            <input id="searchInput" type="search" placeholder="Bijv. Aardbeienautomaat" />
+          </label>
+          <div class="legend">
+            <h3>Legenda</h3>
+            <ul>
+              <li><span class="dot dot--fruit"></span> Fruit &amp; groente</li>
+              <li><span class="dot dot--dairy"></span> Zuivel</li>
+              <li><span class="dot dot--meat"></span> Vlees</li>
+              <li><span class="dot dot--mixed"></span> Gemengd</li>
+            </ul>
+          </div>
+          <div class="data-hint">
+            <p>Deze demo bevat voorbeeldlocaties. Voeg je eigen dataset toe in <code>app.js</code> om alle automaten te tonen.</p>
+          </div>
+        </section>
+
+        <section class="app__map" aria-label="Kaart met voedselautomaten">
+          <div id="map"></div>
+        </section>
+      </main>
+
+      <footer class="app__footer">
+        <span>Bron: OpenStreetMap</span>
+        <span>Laatste update: <time id="updated"></time></span>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="app.js"></script>
+  </body>
+</html>
